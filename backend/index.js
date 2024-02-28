@@ -1,15 +1,15 @@
 const express = require('express');
-const cors = require('cors');  // Add this line
+const cors = require('cors');  
 const multer = require('multer');
 const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
-app.use(cors());  // Use cors middleware
+app.use(cors());  
 app.use(express.json());
 app.use('/uploads', express.static('./uploads'));
 
-const port = process.env.PORT || 3001;  // Provide a default port if not set
+const port = process.env.PORT || 3001;  
 
 mongoose.connect('mongodb://127.0.0.1:27017/upload_db', {
   useNewUrlParser: true,
